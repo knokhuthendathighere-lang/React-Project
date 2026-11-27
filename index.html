@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Creative Portfolio | Nokutenda Tigere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/gallery.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <a href="#" class="logo">NOKU<span>.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="nav-button">Hire Me ↗</a>
+
+     <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+    aria-controls="navLinks">
+    ☰
+</button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <span class="tag">CREATIVE DESIGNER & VIDEO EDITOR</span>
+
+          <h1>
+            Turning Ideas Into
+            <span>Visual Experiences.</span>
+          </h1>
+
+          <p>
+            I create meaningful visual designs and engaging video experiences
+            that help brands communicate, connect and stand out.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portfolio" class="primary-btn">Explore My Work ↗</a>
+            <a href="#contact" class="secondary-btn">Let's Talk</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-circle"></div>
+          <div class="visual-text">CREATIVITY<br />WITHOUT LIMITS.</div>
+          <span class="visual-number">01 / 05</span>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-heading">
+          <span>WHAT I DO</span>
+          <h2>My <span>Services.</span></h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Graphic Design</h3>
+            <p>
+              Visual communication, posters, flyers and social media creatives.
+            </p>
+          </article>
+
+          <article class="service-card featured">
+            <span>02</span>
+            <h3>Brand Identity</h3>
+            <p>
+              Building consistent and memorable visual identities for brands.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span>03</span>
+            <h3>Video Editing</h3>
+            <p>
+              Engaging video content, storytelling and professional editing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="section-heading">
+          <span>SELECTED CREATIVE WORK</span>
+          <h2>My <span>Portfolio.</span></h2>
+          <p>Explore some of my creative projects.</p>
+        </div>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-category="all">
+            All Work
+          </button>
+          <button class="filter-btn" data-category="graphic">
+            Graphic Design
+          </button>
+          <button class="filter-btn" data-category="branding">Branding</button>
+          <button class="filter-btn" data-category="video">
+            Video Editing
+          </button>
+        </div>
+
+        <div id="projectGallery" class="project-grid">
+          <!-- Projects will be loaded here -->
+        </div>
+      </section>
+      <!-- ABOUT SECTION -->
+
+      <section id="about" class="about">
+        <div class="about-heading">
+          <span>GET TO KNOW ME</span>
+
+          <h2>
+            Creativity meets
+            <span>purpose.</span>
+          </h2>
+
+          <div class="about-line"></div>
+        </div>
+
+        <div class="about-content">
+          <p>
+            I'm a creative designer and video editor passionate about
+            transforming ideas into compelling visual experiences. I help
+            businesses communicate their stories, build stronger visual
+            identities and connect with their audiences through thoughtful
+            design and engaging video content.
+          </p>
+
+
+<div class="about-tools">
+    <span>TOOLS I WORK WITH</span>
+
+    <div class="tool-list">
+
+        <div class="tool-item">
+            <img src="/images/tools/affinity.png" alt="Affinity">
+            <span>Affinity</span>
+        </div>
+
+        <div class="tool-item">
+            <img src="/images/tools/photoshop.png" alt="Photoshop">
+            <span>Photoshop</span>
+        </div>
+
+        <div class="tool-item">
+            <img src="/images/tools/capcut.png" alt="CapCut">
+            <span>CapCut</span>
+        </div>
+
+        <div class="tool-item">
+            <img src="/images/tools/davinci.png" alt="DaVinci Resolve">
+            <span>DaVinci Resolve</span>
+        </div>
+
+    </div>
+</div>
+      </section>
+
+   <!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+
+    <div class="contact-content">
+        <span class="contact-tag">HAVE A PROJECT IN MIND?</span>
+
+        <h2>
+            Let's create something
+            <span>great.</span>
+        </h2>
+
+        <p>
+            Have an idea, a project or a brand that needs a creative touch?
+            Let's work together and bring it to life.
+        </p>
+
+        <div class="contact-buttons">
+            <a href="mailto:tigere.n.career@gmail.com" class="primary-btn">
+                Email Me ↗
+            </a>
+
+            <a href="https://wa.me/918968991395"
+               class="whatsapp-btn"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp ↗
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-form-container">
+        <h3>Tell me about your project.</h3>
+
+        <form action="https://formsubmit.co/tigere.n.career@gmail.com"
+              method="POST">
+
+            <input type="hidden" name="_subject"
+                   value="New Portfolio Project Enquiry">
+
+            <input type="hidden" name="_captcha" value="true">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="name"
+                   placeholder="Your full name" required>
+
+            <input type="email" name="email"
+                   placeholder="Your email address" required>
+
+            <select name="service" required>
+                <option value="" disabled selected>
+                    Select a service
+                </option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Brand Identity">Brand Identity</option>
+                <option value="Video Editing">Video Editing</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <textarea name="message"
+                      placeholder="Tell me about your project..."
+                      rows="4" required></textarea>
+
+            <button type="submit">Send Enquiry ↗</button>
+
+        </form>
+    </div>
+
+</section>
+    </main>
+
+   <footer class="footer">
+    <div class="footer-top">
+        <a href="#home" class="footer-logo">NOKU<span>.</span></a>
+
+        <p>
+            Creating visual experiences through design,
+            creativity and storytelling.
+        </p>
+
+        <div class="footer-socials">
+            <a href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="YOUR_YOUTUBE_URL" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Nokutenda Tigere. All rights reserved.</p>
+        <a href="#home">Back to top ↑</a>
+    </div>
+</footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

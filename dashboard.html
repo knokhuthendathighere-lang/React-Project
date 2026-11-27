@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | Noku Creative</title>
+
+    <link rel="stylesheet" href="/src/styles/admin.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <a href="/" class="logo">NOKU<span>.</span></a>
+
+        <p class="sidebar-label">MENU</p>
+
+        <nav>
+          <a href="#overview" class="active">Dashboard</a>
+          <a href="#projects">Projects</a>
+          <a href="#add-project">Add Project</a>
+        </nav>
+
+        <button id="logoutButton">Logout</button>
+      </aside>
+
+      <main class="dashboard-content">
+        <header id="overview" class="dashboard-header">
+          <div>
+            <span>ADMIN PANEL</span>
+            <h1>Dashboard.</h1>
+            <p>Manage your creative portfolio.</p>
+          </div>
+
+          <a href="/" target="_blank" class="view-site"> View Website ↗ </a>
+        </header>
+
+        <section class="dashboard-stats">
+          <div class="stat-card">
+            <span>Total Projects</span>
+            <h2 id="totalProjects">0</h2>
+          </div>
+
+          <div class="stat-card">
+            <span>Graphic Design</span>
+            <h2 id="graphicProjects">0</h2>
+          </div>
+
+          <div class="stat-card">
+            <span>Video Projects</span>
+            <h2 id="videoProjects">0</h2>
+          </div>
+        </section>
+        <section id="add-project" class="dashboard-section">
+          <h2>Add New Project</h2>
+
+          <p>Add a new creative project to your portfolio.</p>
+
+          <form id="projectForm" class="project-form">
+            <div class="form-group">
+              <label for="projectTitle">Project Title</label>
+              <input
+                type="text"
+                id="projectTitle"
+                placeholder="e.g. Social Media Campaign"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="projectCategory">Category</label>
+
+              <select id="projectCategory" required>
+                <option value="">Select Category</option>
+                <option value="graphic">Graphic Design</option>
+                <option value="branding">Branding</option>
+                <option value="video">Video Editing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="projectDescription">Description</label>
+              <textarea
+                id="projectDescription"
+                rows="4"
+                placeholder="Describe your project..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="projectImage">Project Thumbnail</label>
+              <input
+                type="file"
+                id="projectImage"
+                accept="image/jpeg,image/png,image/webp"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="youtubeUrl">YouTube URL (Optional)</label>
+              <input
+                type="url"
+                id="youtubeUrl"
+                placeholder="https://youtube.com/watch?v=..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="videoOrientation">Video Orientation</label>
+
+              <select id="videoOrientation">
+                <option value="landscape">Landscape</option>
+                <option value="portrait">Portrait</option>
+              </select>
+            </div>
+
+            <button type="submit" id="saveProjectButton">Add Project</button>
+
+            <p id="projectMessage"></p>
+          </form>
+        </section>
+        <section id="projects" class="dashboard-section">
+          <h2>Your Projects</h2>
+
+          <p>Projects stored in your Supabase database.</p>
+
+          <div id="adminProjectList">Loading projects...</div>
+        </section>
+      </main>
+    </div>
+    <div id="editProjectModal" class="edit-modal">
+      <div class="edit-modal-content">
+        <button id="closeEditModal" class="close-modal">&times;</button>
+
+        <h2>Edit Project</h2>
+
+        <form id="editProjectForm">
+          <input type="hidden" id="editProjectId" />
+
+          <div class="form-group">
+            <label for="editTitle">Project Title</label>
+            <input type="text" id="editTitle" required />
+          </div>
+
+          <div class="form-group">
+            <label for="editCategory">Category</label>
+
+            <select id="editCategory" required>
+              <option value="graphic">Graphic Design</option>
+              <option value="branding">Branding</option>
+              <option value="video">Video Editing</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="editDescription">Description</label>
+            <textarea id="editDescription" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="editImage">Replace Thumbnail (Optional)</label>
+            <input
+              type="file"
+              id="editImage"
+              accept="image/jpeg,image/png,image/webp"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="editYoutubeUrl">YouTube URL</label>
+            <input type="url" id="editYoutubeUrl" />
+          </div>
+
+          <div class="form-group">
+            <label for="editOrientation">Video Orientation</label>
+            <select id="editOrientation">
+              <option value="landscape">Landscape</option>
+              <option value="portrait">Portrait</option>
+            </select>
+          </div>
+
+          <button type="submit" id="updateProjectButton">Save Changes</button>
+
+          <p id="editMessage"></p>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/src/js/dashboard.js"></script>
+  </body>
+</html>
